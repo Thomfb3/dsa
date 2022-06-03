@@ -2,7 +2,8 @@
 //  * @param {number[]} nums
 //  * @return {number[][]}
 //  */
- var threeSum = function(nums) {
+
+var threeSum = function(nums) {
     
     
     
@@ -12,8 +13,8 @@
 // Notice that the solution set must not contain duplicate triplets.
 
 
-[1,2,3,4,5,6,7,8]
+// [1,2,3,4,5,6,7,8]
 
-target = 6;
+// target = 6;
 
 
