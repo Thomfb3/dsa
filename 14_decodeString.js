@@ -10,19 +10,26 @@ var decodeString = (s) => {
     let answer = '';
 
     for(let char of s) {
+        
         if (!isNaN(char)) {
+            //if char is number
             tempNum = `${tempNum}${char}`;
+
         } else if (char === "[") {
+            //push tempNum to mult stack and clear tempNum
             multipliers.push(tempNum);
             tempNum = '';
 
+            //push answer to stack and clear stack
             repeatStrings.push(answer);
             answer = '';
-        } else if (char === "]") {
 
+        } else if (char === "]") {
+            // answer = repeatStrings pop + answer x multipliers pop
             answer = repeatStrings.pop() + answer.repeat(multipliers.pop())
 
         } else {
+            //add char to answer
             answer += char;
         }
     }
@@ -30,6 +37,13 @@ var decodeString = (s) => {
     return answer;
 };
 
+// Input: s = "3[a2[c]]"
+// Output: "accaccacc"
+
+// multipliers = [3];
+// tempNum = '';
+// repeatStrings = ['',acc];
+// answer = 'accaccacc';
 
 
 // Example 1:
