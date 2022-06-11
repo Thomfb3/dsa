@@ -25,10 +25,10 @@ const twoSum2 = (nums, target) => {
     for(let i = 0; i < nums.length; i++) {
         let diff = target - nums[i];
 
-        if(hash.has(diff)) {
-            return [i, hash.get(diff)];
+        if(map.has(diff)) {
+            return [i, map.get(diff)];
         }
-        hash[nums[i]] = i;
+        map[nums[i]] = i;
     }
 };
 

@@ -9,7 +9,7 @@ const LRUCache = function(capacity) {
     this.map = new Map();
     // initializing doubly linked list
     this.head = {};
-    this.tail = {}
+    this.tail = {};
     this.head.next = this.tail;
     this.tail.prev = this.head;
 };
