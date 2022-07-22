@@ -28,7 +28,7 @@ const inorderTraversal = (root) => {
     const stack = [];
     const acc = [];
     let curr = root;
-
+ 
     while (true) {
 
         while(curr) {
