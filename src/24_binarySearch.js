@@ -10,4 +10,3 @@ const binarySearch = (array, target, left = 0, right = array.length - 1) => {
     };
 }
 
-
